@@ -3,7 +3,9 @@
 session_start();
 
 if ($_SESSION) {
-    # code...
+    print_r($_SESSION);
+} else{
+    echo " No has iniciado sesión";
 }
 
 

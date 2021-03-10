@@ -14,20 +14,16 @@ try {
     }*/
 
 
-//Prepare statements. Consultas preparadas diseñadas para que el ussuario pueda inyectar código en nuestra aplicacion
+//Prepare statements. Consultas preparadas diseñadas para que el ussuario no pueda inyectar código en nuestra aplicacion
 
-$statement = $conexion->prepare('SELECT * FROM usuarios WHERE id = :id or :id2');
-$statement->execute(
-    array(
-        ':id' => $id,
-        ':id2' => 5
-        )
-);
+$statement = $conexion->prepare('INSERT INTO usuarios VALUES (null, "Jose") ');
+$statement->execute();
 
+/*
 $resultados = $statement->fetchall();
 foreach ($resultados as $usuario) {
     echo $usuario['nombre'] . '<br />';
-}
+}*/
 
 
 } catch (PDOException $e) {

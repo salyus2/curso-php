@@ -26,6 +26,6 @@ if (!$articulos) {
 $totalArticulos = $conexion->query('SELECT FOUND_ROWS() as total');
 $totalArticulos = $totalArticulos->fetch()['total'];
 
-$numeroPaginas = ceil($totalArticulos / $postPorPagina);
+
 
 require 'index.view.php';

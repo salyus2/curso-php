@@ -2,7 +2,7 @@
 
 
 // echo nos sirve para mostar información en pantalla
-echo "Hola Mundo";
+echo "Hola Mundo dos";
 
 # Otro Comentario
 
